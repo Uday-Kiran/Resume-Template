@@ -80,7 +80,7 @@ body {
 }
 
 ul.navg{
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: black;
   /*background-color: white;*/
   padding-left: 30%;
@@ -392,6 +392,9 @@ body {
   border-width: 10px 10px 10px 0;
   border-color: transparent lawngreen transparent transparent;
 }
+.left::after {
+  /*left: -16px;*/
+}
 .right::after {
   left: -16px;
 }
@@ -412,3 +415,54 @@ body {
   margin: 0;
 }
     /*timeline end*/
+
+@media(max-width: 700px) and (min-width: 451px){
+  .header p{
+    font-size: 80%;
+  }
+  ul.navg{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4,7rem);
+    margin-top: 25%;
+    height: 55px;
+    grid-gap: 3px;
+  }
+  .navg a{
+    font-size: 15pt;
+    padding: 0;
+    /*grid-template-columns: repeat(4,2rem);*/
+  }
+  .containertl::after{
+    /*right: 5px;*/
+  }
+  .left{
+    left: -22px;
+  }
+}
+
+@media (max-width: 450px){
+  .header p{
+    font-size: 70%;
+  }
+  ul.navg{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4,4rem);
+    margin-top: 45%;
+    height: 55px;
+    grid-gap: 12px;
+    padding-left: 142px;
+  }
+  .navg a{
+    font-size: 10pt;
+    padding: 0;
+    /*grid-template-columns: repeat(4,2rem);*/
+  }
+  .containertl::after{
+    /*right: 5px;*/
+  }
+  .left{
+    left: -47px;
+  }
+}
